@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Free Desk — Inbox Triage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="brand">The Free Desk</p>
+      <h1>Inbox triage</h1>
+      <p class="sub">Three homes. No maybe folder. Free.</p>
+    </div>
+    <button id="reset" type="button">Reset demo</button>
+  </header>
+
+  <section class="rules" aria-label="Rules">
+    <div><strong>Under 2 min</strong> → do it now</div>
+    <div><strong>Waiting on someone</strong> → Waiting + date</div>
+    <div><strong>Useful later</strong> → Reference</div>
+    <div><strong>Otherwise</strong> → archive / delete</div>
+  </section>
+
+  <main class="board">
+    <section class="col" data-col="inbox">
+      <h2>Inbox <span id="count-inbox" class="count">0</span></h2>
+      <div class="list" id="inbox"></div>
+    </section>
+    <section class="col" data-col="action">
+      <h2>Action <span id="count-action" class="count">0</span></h2>
+      <div class="list" id="action"></div>
+    </section>
+    <section class="col" data-col="waiting">
+      <h2>Waiting <span id="count-waiting" class="count">0</span></h2>
+      <div class="list" id="waiting"></div>
+    </section>
+    <section class="col" data-col="reference">
+      <h2>Reference <span id="count-reference" class="count">0</span></h2>
+      <div class="list" id="reference"></div>
+    </section>
+  </main>
+
+  <p class="foot">Demo for screen recording · no accounts · $0 stack · <a href="https://www.youtube.com/@TheFreeDesking">@TheFreeDesking</a></p>
+  <script src="app.js"></script>
+</body>
+</html>
