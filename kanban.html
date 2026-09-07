@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Free Desk — Free Kanban</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="kanban-page">
+  <header class="top">
+    <div>
+      <p class="brand">The Free Desk</p>
+      <h1>Free Kanban</h1>
+      <p class="sub">Three columns. WIP 3. No Notion needed.</p>
+    </div>
+    <div class="top-actions">
+      <button id="add-card" type="button">+ Add card</button>
+      <button id="reset" type="button">Reset demo</button>
+    </div>
+  </header>
+
+  <div id="wip-banner" class="wip-banner" hidden role="status" aria-live="polite">
+    WIP full — finish one first
+  </div>
+
+  <main class="board board-3" aria-label="Kanban board">
+    <section class="col" data-col="todo">
+      <h2>To Do <span id="count-todo" class="count">0</span></h2>
+      <div class="list" id="todo"></div>
+    </section>
+    <section class="col col-doing" data-col="doing">
+      <h2>
+        Doing
+        <span class="wip-badge" id="wip-badge" title="Hard WIP limit">WIP <span id="wip-now">0</span>/3</span>
+      </h2>
+      <div class="list" id="doing"></div>
+    </section>
+    <section class="col" data-col="done">
+      <h2>Done <span id="count-done" class="count">0</span></h2>
+      <div class="list" id="done"></div>
+    </section>
+  </main>
+
+  <p class="foot">
+    Demo for screen recording · dummy cards only · $0 ·
+    <a href="index.html">Inbox triage</a> ·
+    <a href="https://www.youtube.com/@TheFreeDesking">@TheFreeDesking</a>
+  </p>
+  <script src="kanban.js"></script>
+</body>
+</html>
